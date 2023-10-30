@@ -56,4 +56,22 @@ for (let i=0; i<menuItems.length; i++){
 
 let main_section = document.createElement("section");
 top_container.insertAdjacentElement("beforeend",main_section)
+main_section.style.color = "white"
+main_section.style.fontFamily = "sans-serif"
+main_section.style.fontWeight = "400"
+main_section.style.display = "flex";
+main_section.style.flexDirection = "column";
+main_section.style.alignItems = "center";
+let logoHeading = document.createElement("h1");
+main_section.insertAdjacentElement("afterbegin", logoHeading);
+logoHeading.textContent = "zomato";
+logoHeading.style.fontStyle = "italic";
+logoHeading.style.fontSize = "3em";
+logoHeading.style.marginBottom = "3em";
+let subheading = document.createElement("h2");
+logoHeading.insertAdjacentElement("afterend", subheading);
+subheading.textContent = "Find the best restaurants, cafés and bars in India";
+subheading.style.fontSize = "2em";
+subheading.style.alignContent = "center"
+
 
