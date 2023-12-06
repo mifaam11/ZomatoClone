@@ -1,6 +1,7 @@
 let body = document.getElementsByTagName("body")[0];
 body.style.margin = 0;
 body.style.padding = 0;
+body.style.fontFamily = "sans-serif"
 // =========================      Top Container         =============================
 let top_container = document.createElement("div");
 top_container.setAttribute("class","top-container");
@@ -57,7 +58,7 @@ for (let i=0; i<menuItems.length; i++){
 let main_section = document.createElement("section");
 top_container.insertAdjacentElement("beforeend",main_section)
 main_section.style.color = "white"
-main_section.style.fontFamily = "sans-serif"
+// main_section.style.fontFamily = "sans-serif"
 main_section.style.fontWeight = "400"
 main_section.style.display = "flex";
 main_section.style.flexDirection = "column";
@@ -67,11 +68,36 @@ main_section.insertAdjacentElement("afterbegin", logoHeading);
 logoHeading.textContent = "zomato";
 logoHeading.style.fontStyle = "italic";
 logoHeading.style.fontSize = "3em";
-logoHeading.style.marginBottom = "3em";
+// logoHeading.style.marginBottom = "3em";
 let subheading = document.createElement("h2");
 logoHeading.insertAdjacentElement("afterend", subheading);
 subheading.textContent = "Find the best restaurants, cafés and bars in India";
 subheading.style.fontSize = "2em";
-subheading.style.alignContent = "center"
+subheading.style.textAlign = "center";
+
+
+
+// ==================         locations          =========================================
+let locateSec = document.createElement("section");
+top_container.insertAdjacentElement("afterend", locateSec);
+
+
+
+let locationDiv = document.createElement("div");
+locateSec.insertAdjacentElement("afterbegin", locationDiv);
+locationDiv.style.width = "69%";
+locationDiv.style.margin = "auto";
+let locationHead = document.createElement("h2");
+locationDiv.insertAdjacentElement("afterbegin", locationHead);
+locationHead.textContent = "Popular locations in India";
+locationHead.style.fontSize = "2em";
+locationHead.style.textAlign = "center"
+
+
+let locationSubhead = document.createElement("p");
+locationDiv.insertAdjacentElement("beforeend",locationSubhead);
+locationSubhead.textContent = "From swanky upscale restaurants to the cosiest hidden gems serving the most incredible food, Zomato covers it all. Explore menus, and millions of restaurant photos and reviews from users just like you, to find your next great meal.";
+locationSubhead.style.fontSize = "1em";
+locationSubhead.style.textAlign = "center"
 
 
